@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}
+Ronald Langeveld
+{% endblock title %}
+
+{% block main %}
+
+<section id="bulmahero" class="hero is-dark is-fullheight">
+        <nav class="navbar is-transparent container" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                 <div class="navbar-item">
+                        <div id="lightmode" class="is-size-5 lmode"><i class="far fa-lightbulb"></i></div>
+                        <div id="nightmode" style="display:none;" class="is-size-5 nmode"><i class="far fa-moon"></i></div>
+        
+                 </div>
+                </div>
+              </nav>
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title is-1">
+              RONALD LANGEVELD
+            </h1>
+            <h2 class="subtitle is-3">
+            Indie Maker working on <a style="text-decoration: underline;" href="https://wip.chat/@ronaldl93" target="_blank">digital products</a>, remotely from <a style="text-decoration: underline;" href="https://nomadlist.com/@ronald" target="_blank">{{now}}</a>
+            </h2>
+
+            <div class="subtitle is-4">
+            <a style="text-decoration: underline;" href="https://blog.ronaldlangeveld.com/" target="_blank">Read my Blog</a>
+
+            </div>
+
+            <h4 class="subtitle is-4">
+                        <a id="twitter-btn" href="https://twitter.com/ronaldlangeveld" target="_blank"><i style="color: #1DA1F2;" class="fab fa-twitter"></i></a>
+                        <a id="github-btn" href="https://github.com/ronaldlangeveld" target="_blank"><i class="fab fa-github"></i></a>
+                        <a id="nomadlist-btn" href="https://nomadlist.com/@ronald" target="_blank"><i style="color: #ff5f5f;" class="fas fa-map"></i></a>
+                        <a id="telegram-btn" href="https://t.me/ronaldla" target="_blank"><i style="color: #0088cc" class="fas fa-paper-plane"></i></a>
+                        <a id="email-btn" href="mailto:hi@ronaldlangeveld.com"><i class="fas fa-at"></i></a>
+                        <span id="twitter-text" style="margin-left: 10px; display:none" class="is-size-7 texttag">Twitter</span>
+                        <span id="github-text" style="margin-left: 10px; display:none" class="is-size-7 texttag">Github</span>
+                        <span id="nomadlist-text" style="margin-left: 10px; display:none" class="is-size-7 texttag">Nomad List</span>
+                        <span id="telegram-text" style="margin-left: 10px; display:none" class="is-size-7 texttag">Telegram</span>
+                        <span id="email-text" style="margin-left: 10px; display:none" class="is-size-7 texttag">Email</span>
+
+            </h4>
+
+
+
+          </div>
+        </div>
+      </section>
+
+{% endblock main %}
+
