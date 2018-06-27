@@ -35,6 +35,20 @@
 {% block main %}
 
 {% endblock %}
+<div id="feedbackpopup" class="feedback-popup expanded">
+    <p id="feedback-close" style="text-align: right"><i class="fa fa-times" aria-hidden="true"></i></p>
+    <p>Let me help you</p>
+    <span class="text">Need help building your product? Or just wanna say Hello? Shoot me the details and I'll get back to you.</span>
+    <br>
+    <input id="contactName" type="text" placeholder="Name" class="name">
+    <input id="contactEmail" type="email" placeholder="Email" class="email">
+    <textarea id="contactMessage" placeholder="Write your message" class="message"></textarea>
+    <div><button id="sendMessage" class="button">Send</button></div>
+</div>
+<div id="sendusfeedbackBTN" class="feedbackform">
+    <button class="feedbackBTN"><i class="fa fa-envelope" aria-hidden="true"></i> Let me build your product</button>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="/static/js/main.js"></script>

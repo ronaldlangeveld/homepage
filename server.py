@@ -3,7 +3,7 @@ from flask import render_template
 from jinja2 import Template
 import requests
 import json
-from flask import jsonify, json
+from flask import jsonify, json, request
 from flask import Response
 from datetime import datetime
 
@@ -30,6 +30,34 @@ def main():
     currentlocation = "South Africa"
     
     return render_template('index.html', now=currentlocation)
+
+
+
+@app.route('/feedback', methods=['POST', 'GET'])
+def feedback():
+    user =  request.form['name']
+    email =  request.form['email']
+    message =  request.form['message']
+
+    userid = "430856496"
+    msg = "Feedback Alert: \n"+"from: " + user + "\nEmail: " + email + "\nMessage: " + message
+    telapi = "https://api.telegram.org/bot549063485:AAE3EwprRm6UWNt9BTWc7aIft2zUVoHm2Ss/sendMessage?chat_id=" + userid + "&text=" + msg
+    print(telapi)
+    r = requests.post(telapi)
+    raw = r.json()
+    data = json.dumps(raw["ok"])
+    print(data)
+
+    if data == "true":
+        return jsonify({'ok':'ok'})
+
+    else: 
+        return jsonify({'ok':'no'})
+
+    
+
+
+
 
 
 @app.route('/lab')
