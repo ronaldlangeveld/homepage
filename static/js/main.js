@@ -136,12 +136,12 @@ $("#sendMessage").click(function() {
             if(succ == 'ok'){
                 $("#feedbackpopup").hide();
                 $("#sendMessage").removeClass("is-loading");
-                alert("Thank You for contacting us. We will get back to you shortly.");
+                alert("Thank You for contacting me. I will get back to you via Email shortly.");
                 $('#contactName, #contactEmail, #contactMessage').val('');
                 $('#sendMessage').prop('disabled', false);
             }
             if(succ == 'no'){
-                alert("Sorry, can't connect to the server right now, our Tech engineers are working on it");
+                alert("Sorry, can't connect to the server right now");
                 $("#sendMessage").removeClass("is-loading");
 
             }
