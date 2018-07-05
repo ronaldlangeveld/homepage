@@ -58,6 +58,16 @@ def feedback():
 
 
 
+@app.route('/fibre')
+def fibre():
+    
+    return render_template('fibre.html')
+
+
+@app.route('/help')
+def help():
+    
+    return render_template('help.html')
 
 
 @app.route('/lab')

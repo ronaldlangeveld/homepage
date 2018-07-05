@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}
+Ronald Langeveld
+{% endblock title %}
+
+{% block main %}
+
+<section id="bulmahero" class="hero is-light is-fullheight">
+        <nav class="navbar is-transparent container" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                 <div class="navbar-item">
+                        <div id="lightmode" style="display:none;" class="is-size-5 lmode"><i class="far fa-lightbulb"></i></div> 
+                        <div id="nightmode"  class="is-size-5 nmode"><i class="far fa-moon"></i></div>
+                             <a href="/">&nbsp; Go Back</a>
+        
+                 </div>
+                </div>
+              </nav>
+        <div class="hero-body">
+          <div class="container">
+
+            <h1 class="subtitle is-3">Let me build your next project.</h1>
+            <h1 class="subtitle is-5">My Stack of Choice</h1>
+            <h2 class="subtitle is-6">Python, Django, Flask, HTML, CSS, Javascript, jQuery,
+              WordPress, ChartJS <br> Linux Servers, NGINX, Postgresql, MySQL, SQLite 
+            </h2>
+                        <h2 class="subtitle is-6">I love Open-Source software.
+            </h2>
+            <h2 class="subtitle is-6">Hire me at $35 / hour. To get in touch, tweet me <a href="https://twitter.com/ronaldlangeveld">@ronaldlangeveld</a> or use the contact me button below.
+            </h2>
+
+
+          </div>
+        </div>
+      </section>
+      <div id="feedbackpopup" class="feedback-popup expanded">
+        <p id="feedback-close" style="text-align: right"><i class="fa fa-times" aria-hidden="true"></i></p>
+        <p>Let me help you</p>
+        <span class="text">Need help building your product? Or just wanna say Hello? Shoot me the details and I'll get back to you. I'm sorry, I had to remove my email due to lots of spam.</span>
+        <br>
+        <input id="contactName" type="text" placeholder="Name" class="name">
+        <input id="contactEmail" type="email" placeholder="Email" class="email">
+        <textarea id="contactMessage" placeholder="Write your message" class="message"></textarea>
+        <div><button id="sendMessage" class="button">Send</button></div>
+    </div>
+    <div id="sendusfeedbackBTN" class="feedbackform">
+        <button class="feedbackBTN"><i class="fa fa-envelope" aria-hidden="true"></i> Contact Me</button>
+    </div>
+{% endblock main %}
