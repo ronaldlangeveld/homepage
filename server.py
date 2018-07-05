@@ -64,7 +64,7 @@ def fibre():
     return render_template('fibre.html')
 
 
-@app.route('/help')
+@app.route('/hire')
 def help():
     
     return render_template('help.html')
