@@ -6,30 +6,48 @@ import json
 from flask import jsonify, json, request
 from flask import Response
 from datetime import datetime
+from datetime import date
+import arrow
 
 app = Flask(__name__)
 
-# @app.route('/')
-# def main():
-    # try:
-    #     r = requests.get('https://nomadlist.com/@ronald.json')
-    #     raw = r.json()
-    #     data = json.dumps(raw['location']['now'])
-    #     loaded = json.loads(data)
-    #     currentlocation = loaded['country']
-    # except requests.exceptions.ConnectionError as e:
-    #     print(e)
-    #     currentlocation = "South Africa"
-
-        # return render_template('index.html', now=currentlocation)
-
-
 @app.route('/')
 def main():
+    try:
+        r = requests.get('https://nomadlist.com/@ronald.json')
+        raw = r.json()
+        data = json.dumps(raw['location']['now'])
+        loaded = json.loads(data)
+        print(loaded)
+        currentcity = loaded['city']
+        currentcountry = loaded['country']
+        nextdata = json.dumps(raw['location']['next'])
+        nextloaded = json.loads(nextdata)
+        nextcity = nextloaded['city']
+        nextcountry = nextloaded['country']
+        nextdate = nextloaded['date_start']
+        today = str(date.today())
+        a = arrow.get(nextdate)
+        b = arrow.get(today)
+        delta = (a-b).days
+        print(delta)
+
+
+
+
+    except requests.exceptions.ConnectionError as e:
+
+        currentcountry = "South Africa"
+
+    return render_template('index.html', city=currentcity, country=currentcountry, nextcity=nextcity, nextcountry=nextcountry, nextdays=delta)
+
+
+# @app.route('/')
+# def main():
     
-    currentlocation = "South Africa"
+#     currentlocation = "South Africa"
     
-    return render_template('index.html', now=currentlocation)
+#     return render_template('index.html', now=currentlocation)
 
 
 
