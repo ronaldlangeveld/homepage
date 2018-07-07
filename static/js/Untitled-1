@@ -1,0 +1,55 @@
+Builders & Brainchilds Africa App Breakdown
+
+
+www.domain.com
+
+
+*Sponsor a Child   
+
+------- Social Media App --------
+*Academia
+Set it up for people (post grad students) to register their services, as well as people wanting to connect with academic services:
+-Connect with Academic Advisers
+-Connect with Field Agents (To help with research) ----quantitative and qualitative
+-Connect with In-Field Experts 
+-Connect with thesis and dissertation editors and proof-readers. 
+
+Tech Notes: Browse around and a lightweight open-source community system, else code from scratch with Python
+Rough Estimation: 21 Days
+
+
+--------- E-Commerce App -----------
+Everything you sell goes here
+*Buy Merchandise 
+-Edu-tech and edutainment
+-Biodegradable jewelry and bags
+-Resiable sandals 
+-Afri Design Takkies 
+-Power banks/ Batteries/ Inverters
+-Uganda Coffee
+-Hemp Clothing 
+-Books /Stationery (pencil cases) /Mugs/ T-shirts
+
+
+Tech Notes: WooCommerce. Custom templating.
+Rough Estimation: 21 Days
+
+
+------- Blogging/Writing App ----------
+Basically the main "informative" part of your website.
+*Blog Posts
+*Social Enterprises (School) 
+*Apply for Scholarships 
+*B&B in News
+*Donate to B&B Africa
+*B&B Events 
+-Event sign-up, RSVP, as well as content and feedback from previous events
+
+Tech Notes: This can all be intergrated into a custom WordPress site. 
+Rough Estimation: 21 Days
+
+
+------ Server Suggestions ---------
+Private Server, at least 1gb RAM.
+Ubuntu Server Software
+Analytics software to page visits.

@@ -31,6 +31,7 @@ def main():
         b = arrow.get(today)
         delta = (a-b).days
         print(delta)
+        
 
 
 
@@ -44,9 +45,9 @@ def main():
 
 # @app.route('/')
 # def main():
-    
+
 #     currentlocation = "South Africa"
-    
+
 #     return render_template('index.html', now=currentlocation)
 
 
@@ -69,34 +70,34 @@ def feedback():
     if data == "true":
         return jsonify({'ok':'ok'})
 
-    else: 
+    else:
         return jsonify({'ok':'no'})
 
-    
+
 
 
 
 @app.route('/fibre')
 def fibre():
-    
+
     return render_template('fibre.html')
 
 
 @app.route('/hire')
 def help():
-    
+
     return render_template('help.html')
 
 
 @app.route('/lab')
 def lab():
-    
+
     return render_template('lab.html')
 
 
 @app.route('/lab/travel')
 def travel():
-    
+
     return render_template('travel.html')
 
 @app.route('/api/travel')
@@ -127,7 +128,7 @@ def traveldata():
             "countrycode": countrycode,
             "days": tripdays
         }
-        
+
 
         travelData.append(newjson)
         jsonStr = json.dumps(travelData)
@@ -136,7 +137,7 @@ def traveldata():
     return jsonify(Travels=qwe)
 
 
-    
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

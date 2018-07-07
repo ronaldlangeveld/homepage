@@ -18,6 +18,7 @@ console.log("JS LOADED");
   }
 
   var csrftoken = getCookie('csrftoken');
+  console.log(csrftoken);
 
 
   function csrfSafeMethod(method) {
@@ -86,20 +87,79 @@ $( "#twitter-btn" ).hover(function() {
 
   });
 
+  var delete_cookie = function(name) {
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+};
+
+
 
   $("#lightmode").click(function(){
-    $('#bulmahero').removeClass('is-dark');
-    $('#bulmahero').addClass('is-light');
-    $("#lightmode").hide();
-    $('#nightmode').show();
+
+    delete_cookie("NightMode=True");
+    document.cookie = "NightMode=False";
+        $('#bulmahero').removeClass('is-dark');
+        $('#bulmahero').addClass('is-light');
+        $("#lightmode").hide();
+        $('#nightmode').show();
+
+        var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)NightMode\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        console.log(cookieValue);
+        console.log(document.cookie);    
+
   })
 
+
+
+
+
   $("#nightmode").click(function(){
+    delete_cookie("NightMode=False");
+    document.cookie = "NightMode=True";
+
     $('#bulmahero').removeClass('is-light');
     $('#bulmahero').addClass('is-dark');
     $('#nightmode').hide();
     $('#lightmode').show();
-  })
+
+    var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)NightMode\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    console.log(cookieValue);
+    console.log(document.cookie);    
+
+  });
+ 
+  if (document.cookie.split(';').filter((item) => item.includes('NightMode=True')).length) {
+
+    $('#bulmahero').removeClass('is-light');
+    $('#bulmahero').addClass('is-dark');
+    $('#nightmode').hide();
+    $('#lightmode').show();
+    console.log(document.cookie);
+
+
+} else {
+    $('#bulmahero').removeClass('is-dark');
+    $('#bulmahero').addClass('is-light');
+    $("#lightmode").hide();
+    $('#nightmode').show();
+    console.log(document.cookie);
+}
+
+// function DarkMode() {
+//     var myCookie = getCookie("darkmode");
+
+//     if (myCookie == null) {
+//         $('#bulmahero').removeClass('is-light');
+//         $('#bulmahero').addClass('is-dark');
+//         $('#nightmode').hide();
+//         $('#lightmode').show();
+//     }
+//     else {
+//         $('#bulmahero').removeClass('is-dark');
+//         $('#bulmahero').addClass('is-light');
+//         $("#lightmode").hide();
+//         $('#nightmode').show();
+//     }
+// }
 
 
 // FEEDBACK Form
